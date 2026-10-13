@@ -1,0 +1,945 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f6f8fc;
+    color: #17243b;
+}
+
+
+/* =====================================================
+   APLICATIVO
+===================================================== */
+
+.aplicativo {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+}
+
+
+/* =====================================================
+   BARRA LATERAL
+===================================================== */
+
+.barra-lateral {
+    width: 235px;
+    min-width: 235px;
+    height: 100vh;
+
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 27px 13px 10px;
+
+    background: #ffffff;
+    color: #536b88;
+
+    border-right: 1px solid #dce4ed;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.area-logo {
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding-left: 7px;
+}
+
+.simbolo-logo {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #245fe5;
+    color: #ffffff;
+
+    font-size: 21px;
+    font-weight: bold;
+
+    box-shadow: 0 5px 12px rgba(36, 95, 229, .2);
+}
+
+.texto-logo {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+
+    color: #2452b5;
+
+    font-size: 19px;
+    font-weight: 700;
+
+    letter-spacing: .3px;
+}
+
+.texto-logo small {
+    color: #8092aa;
+
+    font-size: 8px;
+    font-weight: 500;
+
+    letter-spacing: .4px;
+}
+
+
+/* =====================================================
+   MENU LATERAL
+===================================================== */
+
+.menu-lateral {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+
+    margin-top: 35px;
+}
+
+.link-menu {
+    width: 100%;
+    height: 43px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 0 12px;
+
+    border-radius: 9px;
+
+    color: #536b88;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: .2s ease;
+}
+
+.link-menu:hover {
+    background: #f0f5ff;
+    color: #2162e9;
+}
+
+.link-menu.ativo {
+    background: #e4efff;
+    color: #2162e9;
+
+    font-weight: 600;
+}
+
+.icone-menu {
+    width: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #607894;
+
+    font-size: 16px;
+}
+
+.link-menu.ativo .icone-menu {
+    color: #2162e9;
+}
+
+.texto-menu {
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   PARTE INFERIOR
+===================================================== */
+
+.parte-inferior {
+    margin-top: auto;
+}
+
+.link-configuracoes {
+    margin-bottom: 12px;
+}
+
+
+/* =====================================================
+   PERFIL
+===================================================== */
+
+.perfil-usuario {
+    min-height: 67px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 13px 8px 4px;
+
+    border-top: 1px solid #dce4ed;
+}
+
+.avatar-usuario {
+    width: 36px;
+    height: 36px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #dce9ff;
+    color: #2162e9;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.informacoes-usuario {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.informacoes-usuario strong {
+    color: #294568;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.informacoes-usuario span {
+    color: #8495aa;
+
+    font-size: 9px;
+}
+
+
+/* =====================================================
+   CONTEÚDO PRINCIPAL
+===================================================== */
+
+.conteudo-principal {
+    flex: 1;
+    min-width: 0;
+
+    background: #f6f8fc;
+}
+
+
+/* =====================================================
+   BARRA SUPERIOR
+===================================================== */
+
+.barra-superior {
+    width: 100%;
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 38px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #dce4ed;
+}
+
+.caminho-pagina {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+}
+
+.caminho-pagina strong {
+    color: #172d4d;
+
+    font-size: 13px;
+}
+
+.caminho-pagina span {
+    position: relative;
+
+    color: #8b9aae;
+
+    font-size: 13px;
+}
+
+.caminho-pagina span::before {
+    content: "/";
+
+    position: absolute;
+
+    left: -12px;
+
+    color: #c2cad5;
+}
+
+
+/* =====================================================
+   AÇÕES SUPERIORES
+===================================================== */
+
+.acoes-superiores {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+}
+
+.notificacao {
+    width: 36px;
+    height: 36px;
+
+    border: 1px solid #dce4ed;
+    border-radius: 9px;
+
+    background: #ffffff;
+    color: #617793;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+.botao-perfil {
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 0 12px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #2162e9;
+    color: #ffffff;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    box-shadow: 0 5px 15px rgba(33, 98, 233, .2);
+
+    cursor: pointer;
+}
+
+.botao-perfil span {
+    font-size: 16px;
+}
+
+
+/* =====================================================
+   CONTEÚDO DAS METAS
+===================================================== */
+
+.conteudo-metas {
+    width: 100%;
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    padding: 34px 38px 60px;
+}
+
+
+/* =====================================================
+   CABEÇALHO DAS METAS
+===================================================== */
+
+.cabecalho-metas {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 34px;
+}
+
+.titulo-metas {
+    flex: 1;
+}
+
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+.status {
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 28px;
+
+    color: #8092aa;
+
+    font-size: 11px;
+}
+
+.ponto-status {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #18ad5a;
+}
+
+
+/* =====================================================
+   TÍTULO
+===================================================== */
+
+.etiqueta-metas {
+    display: block;
+
+    margin-bottom: 14px;
+
+    color: #2162e9;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: .5px;
+}
+
+.titulo-metas h1 {
+    color: #122746;
+
+    font-size: 38px;
+    font-weight: 700;
+
+    letter-spacing: -1.3px;
+
+    margin-bottom: 14px;
+}
+
+.titulo-metas p {
+    max-width: 680px;
+
+    color: #8ba0bc;
+
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   AÇÕES DAS METAS
+===================================================== */
+.acoes-metas {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    gap: 30px;
+
+    flex-shrink: 0;
+}
+
+.botao-nova-meta {
+    height: 42px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 17px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #2162e9;
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    box-shadow: 0 6px 14px rgba(33, 98, 233, .18);
+
+    cursor: pointer;
+
+    transition: .2s ease;
+}
+
+.botao-nova-meta:hover {
+    background: #1555d5;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    transform: translateY(-1px);
+}
+
+.botao-nova-meta:visited {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.botao-nova-meta:active {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+/* =====================================================
+   LISTA DE METAS
+===================================================== */
+
+.lista-metas {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px;
+}
+
+
+/* =====================================================
+   CARD DA META
+===================================================== */
+
+.card-meta {
+    min-height: 272px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 26px;
+
+    background: #ffffff;
+
+    border: 1px solid #dce5ef;
+    border-radius: 20px;
+
+    box-shadow: 0 8px 24px rgba(37, 67, 105, .04);
+}
+
+
+/* =====================================================
+   TOPO DO CARD
+===================================================== */
+.topo-meta {
+    width: 100%;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+/* =====================================================
+   ÍCONE DA META
+===================================================== */
+
+.icone-meta {
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    font-size: 21px;
+}
+
+
+/* =====================================================
+   CORES DOS ÍCONES
+===================================================== */
+
+.icone-meta.financeira {
+    background: #dcf9e8;
+    color: #0aaa51;
+}
+
+.icone-meta.academica {
+    background: #deebff;
+    color: #2162e9;
+}
+
+.icone-meta.pessoal {
+    background: #eee5ff;
+    color: #7b35ef;
+}
+
+.icone-meta.profissional {
+    background: #fff0dc;
+    color: #e98a21;
+}
+
+
+/* =====================================================
+   LADO DIREITO DO TOPO
+===================================================== */
+.lado-direito-topo {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 2px;
+
+    margin-left: auto;
+}
+
+/* =====================================================
+   PORCENTAGEM
+===================================================== */
+
+.porcentagem-meta {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.porcentagem-meta.verde {
+    color: #00a94f;
+}
+
+.porcentagem-meta.azul {
+    color: #2162e9;
+}
+
+.porcentagem-meta.roxo {
+    color: #792df0;
+}
+
+.porcentagem-meta.laranja {
+    color: #e98a21;
+}
+
+
+/* =====================================================
+   BOTÃO EXCLUIR META
+===================================================== */
+
+.botao-excluir-meta {
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #f1efff;
+    color: #6259d8;
+
+    font-size: 17px;
+    font-weight: 600;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+}
+
+.botao-excluir-meta:hover {
+    background: #6259d8;
+    color: #ffffff;
+}
+
+
+
+/* =====================================================
+   INFORMAÇÕES
+===================================================== */
+
+.informacao-meta {
+    margin-top: auto;
+
+    margin-bottom: 27px;
+}
+
+.informacao-meta strong {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #294568;
+
+    font-size: 17px;
+}
+
+.informacao-meta span {
+    color: #8ba0bc;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   BARRA DE PROGRESSO
+===================================================== */
+
+.barra-progresso {
+    width: 100%;
+    height: 9px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background: #e8eef5;
+
+    margin-bottom: 21px;
+}
+
+.progresso {
+    height: 100%;
+
+    border-radius: 10px;
+}
+
+.progresso.verde {
+    background: #16aa50;
+}
+
+.progresso.azul {
+    background: #2864eb;
+}
+
+.progresso.roxo {
+    background: #7b36ee;
+}
+
+.progresso.laranja {
+    background: #e98a21;
+}
+
+
+/* =====================================================
+   RODAPÉ DO CARD
+===================================================== */
+
+.rodape-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 17px;
+
+    border-top: 1px solid #dce4ed;
+}
+
+.rodape-meta span {
+    color: #8ba0bc;
+
+    font-size: 13px;
+}
+
+.rodape-meta a {
+    color: #2162e9;
+
+    font-size: 13px;
+
+    text-decoration: none;
+}
+
+.rodape-meta a:hover {
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   AVISO DE PROGRESSO
+===================================================== */
+
+.aviso-progresso {
+    width: 100%;
+    min-height: 92px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 22px;
+
+    padding: 20px;
+
+    border: 1px solid #bcefd2;
+    border-radius: 17px;
+
+    background: #effff5;
+}
+
+
+/* =====================================================
+   ÍCONE DO AVISO
+===================================================== */
+
+.icone-aviso {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #d7f9e5;
+    color: #08a84e;
+
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   TEXTO DO AVISO
+===================================================== */
+
+.texto-aviso {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.texto-aviso strong {
+    color: #ffffff;
+
+    font-size: 16px;
+}
+
+.texto-aviso span {
+    color: #8ba0bc;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   ÁREA SEM METAS
+===================================================== */
+
+.aviso-sem-metas {
+    width: 100%;
+    min-height: 90px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    padding: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #dce4ed;
+
+    border-radius: 17px;
+
+    grid-column: 1 / -1;
+}
+
+
+/* =====================================================
+   ÍCONE SEM METAS
+===================================================== */
+
+.icone-sem-metas {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f1f4f8;
+
+    border-radius: 12px;
+
+    color: #607894;
+
+    font-size: 21px;
+}
+
+
+/* =====================================================
+   TEXTO SEM METAS
+===================================================== */
+
+.texto-sem-metas {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.texto-sem-metas strong {
+    color: #294568;
+
+    font-size: 15px;
+}
+
+.texto-sem-metas span {
+    color: #8ba0bc;
+
+    font-size: 13px;
+}

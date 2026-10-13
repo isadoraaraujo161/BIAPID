@@ -1,0 +1,347 @@
+:root{--azul:#1553f0;--marinho:#0f1f5c;--texto:#1b2a5e;--suave:#5b6892;--fundo:#f3f6fd;--linha:#e3e9f7;--claro:#e9f0ff;
+--vermelho:#e8455f;--laranja:#f5a524;--verde:#22a06b;--roxo:#5b3fd6}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Plus Jakarta Sans",system-ui,sans-serif;background:var(--fundo);color:var(--texto)}
+a{text-decoration:none;color:inherit}
+.ic{width:19.5px;height:19.5px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.aplicativo{display:flex;min-height:100vh}
+
+/* ===== MENU LATERAL ===== */
+.barra-lateral{width:234px;background:#fff;border-right:1px solid var(--linha);padding:13.5px 13.5px 18px;display:flex;flex-direction:column;flex-shrink:0;position:sticky;top:0;height:100vh;overflow-y:auto}
+.area-logo{display:flex;align-items:center;gap:10.5px}
+.simbolo-logo{width:52.5px;height:49.5px;border-radius:13.5px;background:linear-gradient(135deg,#1a5cff,#0b3fd1);color:#fff;font-size:31.5px;font-weight:800;display:grid;place-items:center;box-shadow:0 4.5px 10.5px rgba(21,83,240,.3)}
+.texto-logo{font-size:25.5px;font-weight:800;color:#0a2a8f;line-height:1}
+.slogan-logo{font-size:11.2px;color:var(--suave)}
+.subtitulo-logo{margin:13.5px 0 10.5px;font-size:12px;line-height:1.3;font-weight:500}
+.menu-lateral{display:flex;flex-direction:column}
+.link-menu{display:flex;align-items:center;gap:13.5px;padding:0 13.5px;height:39.8px;margin:3px 0;border-radius:9px;font-weight:600;font-size:14.2px;color:var(--texto);transition:background .15s}
+.link-menu:hover{background:#f3f6ff}
+.icone-menu{display:grid;place-items:center;color:#1b4fc8}
+.link-menu.ativo{background:var(--claro);color:#0a2a8f;font-weight:700;box-shadow:inset 3px 0 0 var(--azul)}
+.parte-inferior{margin-top:auto;border-top:1px solid var(--linha);padding-top:10.5px}
+.perfil-usuario{margin-top:10.5px;background:var(--claro);border-radius:12px;padding:9px 10.5px;display:flex;align-items:center;gap:10.5px}
+.avatar-usuario{width:46.5px;height:46.5px;border-radius:50%;background:linear-gradient(135deg,#1a5cff,#0b3fd1);color:#fff;font-weight:800;font-size:15px;display:grid;place-items:center;border:3px solid #cfe0ff;flex-shrink:0}
+.informacoes-usuario strong{display:block;color:var(--azul);font-size:12.8px}
+.informacoes-usuario span{font-size:11px;color:var(--suave);display:flex;align-items:center;gap:4.5px}
+.ponto-online{width:7.5px;height:7.5px;border-radius:50%;background:var(--verde);display:inline-block}
+.seta-perfil{margin-left:auto;color:var(--azul);font-size:19.5px}
+
+/* ===== TOPO ===== */
+.conteudo-principal{flex:1;min-width:0}
+.barra-superior{height:61.5px;background:#fff;border-bottom:1px solid var(--linha);display:flex;align-items:center;justify-content:space-between;padding:0 13.5px 0 21px}
+.caminho-pagina{display:flex;align-items:center;gap:10.5px;font-size:14.2px;font-weight:600;color:var(--marinho)}
+.caminho-pagina .ic{color:#1b4fc8}
+.caminho-pagina em{font-style:normal;color:var(--suave);font-weight:400}
+.botao-perfil{border:0;font:inherit;cursor:pointer;background:var(--azul);color:#fff;border-radius:10.5px;height:39.8px;padding:0 16.5px;display:flex;align-items:center;gap:10.5px;font-weight:700;font-size:13.5px;box-shadow:0 4.5px 10.5px rgba(21,83,240,.25)}
+.botao-perfil .ic{width:16.5px;height:16.5px}
+
+/* ===== ÁREA PRINCIPAL (grade 2 colunas) ===== */
+.conteudo{display:grid;grid-template-columns:minmax(0,1fr) 312px;gap:12px 18px;padding:9px 13.5px 18px 15px;align-items:start}
+.visualizacao-agenda{display:none}
+
+.cabecalho-pagina,.cartao,.cartao-lateral{background:#fff;border:1px solid #edf1fb;border-radius:18px;box-shadow:0 3px 13.5px rgba(30,60,140,.08)}
+.cabecalho-pagina{display:flex;align-items:center;gap:15px;padding:10.5px 12px;align-self:stretch}
+.icone-pagina{width:58.5px;height:51px;border-radius:15px;background:linear-gradient(135deg,#1a5cff,#0b3fd1);display:grid;place-items:center;color:#fff;flex-shrink:0}
+.icone-pagina .ic{width:28.5px;height:28.5px}
+.texto-pagina h1{font-size:25.5px;font-weight:800;color:var(--marinho);line-height:1.1}
+.texto-pagina p{color:var(--suave);font-size:12.8px;font-weight:500}
+.acoes-pagina{margin-left:auto;display:flex;align-items:center;gap:10.5px}
+.nova-tarefa{background:var(--claro);color:#0a3bd6;font-weight:700;font-size:11.2px;padding:9.8px 12px;border-radius:9px;white-space:nowrap}
+.seletor-visualizacao{display:flex;background:#fff;border:1px solid var(--linha);border-radius:12px;padding:4.5px;gap:2px}
+.botao-visualizacao{font-weight:600;font-size:12.8px;color:var(--marinho);height:36px;padding:0 19.5px;border-radius:9px;display:grid;place-items:center}
+
+.aviso-progresso{background:linear-gradient(120deg,#5b43d6,#2f6bef 60%,#2a9cf2);color:#fff;border-radius:16.5px;padding:13.5px 15px;display:flex;gap:12px;align-items:center;position:relative;align-self:stretch}
+.lampada{width:39px;height:45px;border-radius:10.5px;background:rgba(255,255,255,.22);display:grid;place-items:center;flex-shrink:0;font-size:22.5px}
+.aviso-progresso strong{font-size:15.8px;font-weight:800;display:block}
+.aviso-progresso p{font-size:12px;line-height:1.35;opacity:.92;padding-right:22.5px}
+.brilho{position:absolute;right:13.5px;top:50%;transform:translateY(-50%);font-size:24px}
+
+/* ===== CALENDÁRIO DO MÊS ===== */
+.cartao-mes{padding:16.5px 15px 13.5px}
+.cabecalho-mes{display:flex;align-items:center;justify-content:center;position:relative;margin-bottom:12px}
+.seta-mes{position:absolute;top:50%;transform:translateY(-50%);width:37.5px;height:30px;border-radius:9px;border:0;background:var(--claro);color:var(--azul);font-size:19.5px;font-weight:800;cursor:pointer}
+#mes-anterior{left:0}#mes-proximo{right:0}
+.titulo-mes{display:flex;align-items:center;gap:10.5px;color:var(--marinho)}
+.titulo-mes .ic{width:27px;height:27px;color:#1b4fc8}
+.titulo-mes strong{font-size:26.2px;font-weight:800}
+.dias-semana,#dias-calendario{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6.8px}
+.dias-semana span{text-align:center;font-weight:700;font-size:12.8px;padding:6px 0 3px;color:var(--marinho)}
+/* células de dia (gerado pelo agenda.js) */
+
+/* ===== COLUNA LATERAL ===== */
+.coluna-lateral{display:flex;flex-direction:column;gap:12px}
+.cartao-lateral{padding:16.5px 16.5px 18px}
+.titulo-lateral{display:flex;align-items:center;gap:10.5px;font-size:16.5px;font-weight:800;color:var(--marinho);margin-bottom:10.5px}
+.titulo-lateral .ic{width:28.5px;height:28.5px;color:#1b4fc8}
+.cartao-lateral>p{font-size:12.8px;line-height:1.4;font-weight:500}
+.botao-sugestao{display:block;margin-top:10.5px;background:var(--claro);color:#0a3bd6;font-weight:700;font-size:12px;text-align:center;border-radius:10.5px;padding:12.8px}
+.linha-prioridade{display:flex;align-items:center;gap:12px;padding:8.2px 0;font-size:12.8px;font-weight:600;border-top:1px solid var(--linha)}
+.titulo-lateral+.linha-prioridade{border-top:0}
+.linha-prioridade strong{margin-left:auto}
+.ponto{width:16.5px;height:16.5px;border-radius:50%;display:inline-block}
+.fundo-vermelho{background:var(--vermelho)}.fundo-laranja{background:var(--laranja)}.fundo-verde{background:var(--verde)}
+.vermelho{color:var(--vermelho)}.laranja{color:#e08a00}.texto-verde{color:var(--verde)}
+.caixa-lembrete{display:flex;align-items:center;gap:10.5px;background:var(--claro);border-radius:10.5px;padding:12px;font-weight:700;font-size:12px}
+.caixa-lembrete .relogio{width:19.5px;height:19.5px;color:var(--azul)}
+.caixa-lembrete em{margin-left:auto;font-style:normal;color:var(--azul);font-size:16.5px}
+
+/* ===== VISÕES DIA E SEMANA ===== */
+#dia .grade-agenda{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+#semana .grade-agenda{display:grid;grid-template-columns:minmax(0,1fr) 312px;gap:18px;align-items:start}
+.cartao{padding:16.5px}
+.cabecalho-cartao{display:flex;justify-content:space-between;align-items:center;margin-bottom:10.5px}
+.titulo-cartao{display:flex;align-items:center;gap:9px;font-size:15px;font-weight:800;color:var(--marinho);margin-bottom:10.5px}
+.cabecalho-cartao .titulo-cartao{margin-bottom:0}
+.cabecalho-cartao a{color:var(--azul);font-weight:700}
+.seta,.demonstrativo{margin-left:auto;font-size:11px;color:var(--azul);background:var(--claro);border:0;border-radius:7.5px;padding:4.5px 9px;font-weight:700}
+.sem-tarefas,.rotulo-pequeno,.mensagem-financeira,.informacoes-evento span{color:var(--suave);font-size:11.2px;font-weight:500}
+.status-financeiro{color:var(--verde);font-weight:700;display:block;margin:4.5px 0 10.5px}
+.porcentagem,.cabecalho-meta{display:flex;justify-content:space-between;font-weight:600;margin-bottom:6px}
+.progresso,.progresso-meta{height:7.5px;background:var(--claro);border-radius:74.2px;overflow:hidden;margin-bottom:10.5px}
+.progresso>div{width:58%;height:100%;background:var(--azul);border-radius:74.2px}
+.progresso-meta .verde{width:60%;height:100%;background:var(--verde)}
+.progresso-meta .azul{width:75%;height:100%;background:var(--azul)}
+.evento{display:flex;gap:12px;align-items:center;margin-bottom:10.5px}
+.data-evento{background:var(--claro);color:var(--azul);border-radius:12px;padding:7.5px 12px;text-align:center;display:flex;flex-direction:column}
+.data-evento strong{font-size:19.5px;line-height:1}
+.informacoes-evento p{font-weight:600;margin-bottom:3px}
+.link-agenda{display:block;background:var(--claro);color:#0a3bd6;font-weight:700;text-align:center;border-radius:10.5px;padding:10.5px}
+
+
+/* ===== TROCA DE VISÃO (classes usadas pelo agenda.js) ===== */
+.visualizacao-agenda.ativa{display:block;grid-column:1/-1}
+#mes.ativa,#mes.ativa .grade-agenda{display:contents}
+.botao-visualizacao:hover{background:#f3f7ff;color:var(--azul)}
+.botao-visualizacao.ativo{background:var(--azul);color:#fff;box-shadow:0 4.5px 9px rgba(21,83,240,.3)}
+button{font-family:inherit}
+
+/* ===== CÉLULAS DO MÊS ===== */
+#dias-calendario>div{position:relative;min-width:0;min-height:70.5px;display:flex;flex-direction:column;align-items:flex-start;gap:4.5px;padding:6px 7.5px;border:1.5px solid var(--linha);border-radius:12px;background:#fbfcff;box-shadow:0 2px 4.5px rgba(30,60,140,.05);transition:.2s}
+.numero-dia{font-size:12.8px;font-weight:700;color:var(--marinho)}
+#dias-calendario>div:hover{border-color:#b8d1f5;background:#f5f9ff}
+#dias-calendario>div.vazio{background:#f8f9fd;box-shadow:none;pointer-events:none}
+#dias-calendario>div.hoje{border:2px solid var(--azul);background:#f2f6ff}
+#dias-calendario>div.hoje .numero-dia{width:22.5px;height:22.5px;border-radius:50%;background:var(--azul);color:#fff;display:grid;place-items:center;margin:-3px 0 0 -3px}
+#dias-calendario>div.com-tarefas{cursor:pointer}
+.lista-mini-tarefas{width:100%;display:flex;flex-direction:column;gap:3px}
+.mini-tarefa{display:flex;align-items:center;gap:4.5px;min-width:0;padding:3.8px 6px;border-radius:7.5px;background:#d6f3e6;color:#137a4f}
+.mini-tarefa.importante{background:#fde8c7;color:#c77a06}
+.mini-tarefa.urgente{background:#fbd4da;color:#d12a48}
+.mini-tarefa i{width:6px;height:6px;border-radius:50%;background:currentColor;flex-shrink:0}
+.mini-tarefa span{min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-size:11px;font-weight:700;color:inherit}
+.mini-tarefas-extra{font-size:11px;font-weight:700;color:var(--suave)}
+
+/* ===== TAREFAS DO DIA ===== */
+.tarefas{display:flex;flex-direction:column}
+.tarefa{min-height:46.5px;display:flex;align-items:center;gap:9px;padding:7.5px 0;border-bottom:1px solid var(--linha)}
+.tarefa:last-child{border-bottom:0}
+.marcador{width:15px;height:15px;border:2px solid #9eacbd;border-radius:50%;background:#fff;cursor:pointer;flex-shrink:0}
+.marcador:hover{border-color:var(--azul)}
+.tarefa-concluida .marcador{background:var(--azul);border-color:var(--azul)}
+.tarefa-concluida .informacoes-tarefa strong{color:#8b98aa;text-decoration:line-through}
+.informacoes-tarefa{min-width:0;flex:1;display:flex;flex-direction:column;gap:3px}
+.informacoes-tarefa strong{font-size:12px;font-weight:700;color:var(--marinho)}
+.informacoes-tarefa span{font-size:11px;color:var(--suave)}
+.prioridade{padding:3.8px 7.5px;border-radius:6px;font-size:11px;font-weight:700;white-space:nowrap}
+.prioridade.importante{background:#fde8c7;color:#c77a06}
+.prioridade.urgente{background:#fbd4da;color:#d12a48}
+.prioridade.normal{background:#d6f3e6;color:#137a4f}
+.sem-tarefas{margin:7.5px 0;padding:15px;text-align:center;background:#f8faff;border:1px dashed #cbd7e6;border-radius:10.5px}
+
+/* ===== SEMANA ===== */
+.cartao-semana{min-width:0}
+.calendario-semana{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6.8px}
+.dia-semana{min-width:0;min-height:195px;padding:10.5px;border:1.5px solid var(--linha);border-radius:12px;background:#fbfcff}
+.cabecalho-dia-semana{display:flex;flex-direction:column;gap:3px}
+.cabecalho-dia-semana span{font-size:11px;font-weight:700;color:var(--suave)}
+.cabecalho-dia-semana strong{font-size:19.5px;font-weight:800;color:var(--marinho)}
+.dia-semana.dia-atual{border:2px solid var(--azul);background:#f2f6ff}
+.dia-semana.dia-atual span,.dia-semana.dia-atual strong{color:var(--azul)}
+.tarefas-dia{display:flex;flex-direction:column;gap:6px;margin-top:10.5px}
+
+/* ===== MODAIS (tarefas do dia / editar tarefa) ===== */
+.fundo-modal{display:none;position:fixed;inset:0;background:rgba(17,30,55,.45);align-items:center;justify-content:center;padding:15px;z-index:200}
+.fundo-modal.aberto{display:flex}
+.caixa-modal{width:100%;max-width:345px;max-height:85vh;display:flex;flex-direction:column;background:#fff;border-radius:16.5px;overflow:hidden;box-shadow:0 15px 37.5px rgba(20,40,70,.18)}
+.cabecalho-modal{display:flex;align-items:center;justify-content:space-between;padding:13.5px 15px;border-bottom:1px solid var(--linha)}
+.cabecalho-modal strong{font-size:13.5px;font-weight:800;color:var(--marinho)}
+.fechar-modal{width:24px;height:24px;border:0;border-radius:7.5px;background:var(--claro);color:var(--azul);font-size:12px;cursor:pointer}
+.corpo-modal{padding:10.5px 15px 15px;overflow-y:auto}
+.item-modal-tarefa{display:flex;align-items:center;justify-content:space-between;gap:7.5px;padding:9px 0;border-bottom:1px solid var(--linha)}
+.item-modal-tarefa:last-child{border-bottom:0}
+.info-item-modal{min-width:0;display:flex;flex-direction:column;gap:3.8px}
+.info-item-modal strong{font-size:11.2px;color:var(--marinho)}
+.info-item-modal span{font-size:11px;color:var(--suave)}
+.info-item-modal .prioridade{align-self:flex-start}
+.acoes-item-modal{display:flex;gap:4.5px;flex-shrink:0}
+.botao-editar-modal,.botao-excluir-modal{width:25.5px;height:25.5px;border:1px solid var(--linha);border-radius:7.5px;background:#fff;cursor:pointer}
+.botao-editar-modal:hover{border-color:#b8d1f5;background:#f5f9ff}
+.botao-excluir-modal:hover{border-color:#f5c2c7;background:#fff5f6}
+.formulario-modal{padding:12px 15px 15px;display:flex;flex-direction:column;gap:10.5px}
+.grupo-modal{flex:1;display:flex;flex-direction:column;gap:4.5px}
+.grupo-modal label{font-size:11px;font-weight:700;color:var(--suave)}
+.grupo-modal input,.grupo-modal select,.grupo-modal textarea{width:100%;padding:8.2px 9px;border:1.5px solid var(--linha);border-radius:9px;background:#f9fbff;color:var(--marinho);font:inherit;font-size:11px;outline:none}
+.grupo-modal textarea{min-height:48px;resize:vertical}
+.grupo-modal input:focus,.grupo-modal select:focus,.grupo-modal textarea:focus{background:#fff;border-color:var(--azul);box-shadow:0 0 0 3px rgba(21,83,240,.1)}
+.linha-modal{display:flex;gap:9px}
+.botoes-modal{display:flex;justify-content:flex-end;gap:7.5px}
+.botao-cancelar-modal{height:31.5px;padding:0 13.5px;border:1px solid var(--linha);border-radius:9px;background:#fff;color:var(--suave);font-weight:700;cursor:pointer}
+.botao-salvar-modal{height:31.5px;padding:0 15px;border:0;border-radius:9px;background:var(--azul);color:#fff;font-weight:700;cursor:pointer}
+.botao-salvar-modal:hover{background:#0f42c7}
+.botao-salvar-modal:disabled{opacity:.6;cursor:not-allowed}
+
+/* ===== AJUSTES: horário nas mini-tarefas e dias de outros meses ===== */
+.mini-tarefa{align-items:flex-start}
+.mini-tarefa i{margin-top:3.8px}
+.mini-texto{min-width:0;display:flex;flex-direction:column}
+.mini-texto small{font-size:11px;font-weight:500}
+#dias-calendario>div.vazio .numero-dia{color:#aab3cf;font-weight:600}
+
+/* ===== CORREÇÃO: texto longo não pode sair da célula ===== */
+#dias-calendario>div{overflow:hidden}
+.lista-mini-tarefas{min-width:0;max-width:100%;overflow:hidden}
+.mini-tarefa{max-width:100%;overflow:hidden}
+.mini-texto{flex:1;min-width:0;max-width:100%;overflow:hidden}
+.mini-texto span,.mini-texto small{display:block;max-width:100%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+
+.texto-pagina{flex:1;min-width:0}
+.acoes-pagina{flex-shrink:0}
+.seletor-visualizacao{flex-shrink:0}
+
+/* ===== VISÃO DIA (igual ao layout) ===== */
+.navegacao-visualizacao{display:flex;align-items:center;gap:6px;flex-shrink:0}
+.seta-dia{display:none;width:30px;height:34px;border:1px solid var(--linha);border-radius:10px;background:#fff;color:var(--azul);font-size:20px;font-weight:700;cursor:pointer;place-items:center}
+.seta-dia:hover{background:var(--claro)}
+.modo-dia .seta-dia{display:grid}
+.modo-dia .nova-tarefa{display:none}
+
+#dia .grade-agenda{grid-template-columns:minmax(0,1fr) 312px;gap:18px;align-items:start}
+.cartao-hoje{padding:16px 18px 18px}
+.cabecalho-hoje{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.icone-hoje{width:44px;height:44px;border-radius:12px;background:var(--claro);color:var(--azul);display:grid;place-items:center;flex-shrink:0}
+.icone-hoje .ic{width:26px;height:26px}
+.cabecalho-hoje h2{font-size:18px;font-weight:800;color:var(--marinho);line-height:1.2}
+.cabecalho-hoje p{font-size:13px;color:var(--suave);margin-top:2px}
+.botao-nova-tarefa{margin-left:auto;background:var(--azul);color:#fff;font-weight:700;font-size:13px;padding:11px 20px;border-radius:12px;box-shadow:0 6px 12px rgba(21,83,240,.25);white-space:nowrap}
+.botao-nova-tarefa:hover{background:#0f42c7}
+
+.tarefa{gap:14px;padding:10px 12px;min-height:58px;border-radius:14px}
+.tarefa-concluida{background:#f4f7fd}
+.marcador{width:22px;height:22px;padding:0;border:2px solid #b5c0d8;border-radius:7px;background:#fff;display:grid;place-items:center}
+.tarefa-concluida .marcador{background:var(--azul);border-color:var(--azul);border-radius:50%}
+.tarefa-concluida .marcador::after{content:"";width:5px;height:9px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg) translate(-1px,-1px)}
+.hora-tarefa{width:44px;flex-shrink:0;font-size:12px;font-weight:700;color:var(--marinho)}
+.informacoes-tarefa strong{font-size:14px}
+.informacoes-tarefa span{font-size:12px}
+.tarefa-concluida .informacoes-tarefa span{text-decoration:line-through;color:#9aa6bf}
+.categoria-tarefa{min-width:64px;text-align:center;padding:5px 10px;border-radius:99px;font-size:11px;font-weight:700;background:#e8edf7;color:var(--suave)}
+.cat-estudos{background:#dbe7ff;color:#1553f0}
+.cat-trabalho{background:#d6e9fb;color:#0b66b5}
+.cat-saude{background:#fbd4da;color:#d12a48}
+.cat-pessoal{background:#e4dffb;color:var(--roxo)}
+.tarefa .prioridade{min-width:68px;text-align:center;border-radius:99px;font-size:11px}
+.menu-tarefa{width:28px;height:28px;border:0;border-radius:8px;background:none;color:var(--texto);font-size:18px;font-weight:800;cursor:pointer;flex-shrink:0}
+.menu-tarefa:hover{background:var(--claro)}
+.lembrete-dia{display:flex;align-items:center;gap:12px;margin-top:10px;padding:13px 16px;border-radius:14px;background:var(--claro);font-size:13px;color:var(--marinho)}
+.lembrete-dia .ic{width:20px;height:20px}
+.lembrete-dia a{margin-left:auto;color:var(--azul);font-weight:700;text-decoration:underline}
+
+.topo-cartao{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.topo-cartao .ic{width:24px;height:24px;color:#1b4fc8}
+.topo-cartao strong{font-size:16px;font-weight:800;color:var(--marinho)}
+.topo-cartao a{margin-left:auto;font-size:12px;font-weight:700;color:var(--azul)}
+.cartao-financeiro .rotulo-pequeno{font-size:12px;margin:0}
+.status-financeiro{background:none;padding:0;font-size:13px;margin:2px 0 10px}
+.porcentagem{align-items:baseline;font-size:15px;font-weight:700;color:var(--marinho);margin-bottom:6px}
+.porcentagem strong{font-size:15px}
+.progresso,.progresso-meta{height:8px;background:var(--claro);border-radius:99px;margin-bottom:10px}
+.mensagem-financeira{font-size:11px;color:var(--suave);margin-top:2px}
+.meta{display:flex;align-items:center;gap:10px;margin-top:10px}
+.icone-meta{width:32px;height:32px;border-radius:10px;display:grid;place-items:center;flex-shrink:0;background:#f1e8fb;color:var(--azul)}
+.icone-meta.rosa{background:#fde3e8;color:var(--vermelho)}
+.icone-meta .ic{width:18px;height:18px}
+.corpo-meta{flex:1;min-width:0}
+.cabecalho-meta{font-size:13px;font-weight:600;margin-bottom:5px;color:var(--marinho)}
+.corpo-meta .progresso-meta{margin-bottom:0}
+.cartao-evento .demonstrativo{margin-left:auto}
+.informacoes-evento p{font-size:13px;font-weight:600;color:var(--marinho);line-height:1.4}
+.link-agenda{display:flex;align-items:center;justify-content:center;gap:10px;font-size:13px}
+.link-agenda .ic{width:18px;height:18px}
+
+/* ===== VISÃO SEMANA (igual ao layout) ===== */
+.nova-tarefa{background:var(--azul);color:#fff;box-shadow:0 6px 12px rgba(21,83,240,.25)}
+.nova-tarefa:hover{background:#0f42c7}
+.cartao-semana{padding:14px 14px 12px}
+.cabecalho-semana{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.seta-semana{width:36px;height:34px;flex-shrink:0;border:0;border-radius:10px;background:var(--claro);color:var(--azul);font-size:20px;font-weight:800;cursor:pointer}
+.seta-semana:hover{background:#dbe7ff}
+.titulo-semana{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:800;color:var(--marinho)}
+.titulo-semana .ic{width:20px;height:20px;color:#1b4fc8}
+.botao-semana-atual{margin-left:auto;display:flex;align-items:center;gap:8px;height:34px;padding:0 14px;border:0;border-radius:10px;background:var(--claro);color:var(--azul);font:inherit;font-size:12px;font-weight:700;cursor:pointer}
+.botao-semana-atual .ic{width:16px;height:16px}
+.calendario-semana{gap:7px}
+.dia-semana{min-height:280px;display:flex;flex-direction:column;padding:10px 8px;border-radius:14px}
+.cabecalho-dia-semana{gap:1px;margin-bottom:8px}
+.cabecalho-dia-semana span{font-size:13px;font-weight:700;color:var(--marinho)}
+.cabecalho-dia-semana strong{font-size:20px}
+.cabecalho-dia-semana small{font-size:11px;font-weight:500;color:var(--suave);margin-top:2px;min-height:1.3em}
+.dia-semana.dia-atual small{color:var(--suave)}
+.tarefas-dia{flex:1;gap:6px;margin-top:0}
+
+.tarefa-semana{--bg:#e8edf7;--cor:#3d4d66;display:flex;flex-direction:column;gap:4px;padding:7px 8px 8px;border-radius:10px;background:var(--bg)}
+.tsc-estudos{--bg:#e9e4fb;--cor:#5b3fd6}
+.tsc-trabalho{--bg:#d6f3e6;--cor:#137a4f}
+.tsc-saude{--bg:#fbd8de;--cor:#d12a48}
+.tsc-pessoal{--bg:#dbe7ff;--cor:#1553f0}
+.topo-tarefa-semana{display:flex;align-items:center;gap:6px}
+.radio-tarefa{width:14px;height:14px;padding:0;border:1.5px solid #9eacbd;border-radius:50%;background:#fff;cursor:pointer;flex-shrink:0}
+.radio-tarefa:hover{border-color:var(--azul)}
+.tarefa-semana-concluida .radio-tarefa{background:var(--azul);border-color:var(--azul)}
+.tarefa-semana-concluida strong{text-decoration:line-through;opacity:.6}
+.hora-semana{font-size:11px;font-weight:700;color:var(--cor)}
+.menu-tarefa-semana{margin-left:auto;border:0;background:none;color:var(--marinho);font-size:14px;font-weight:800;line-height:1;cursor:pointer}
+.tarefa-semana strong{font-size:11px;font-weight:700;color:var(--marinho);overflow-wrap:anywhere;line-height:1.3}
+.categoria-mini{align-self:flex-start;padding:2px 8px;border-radius:99px;font-size:11px;font-weight:700;background:rgba(255,255,255,.6);color:var(--cor)}
+
+.vazio-semana{flex:1;min-height:150px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:12px 8px;border-radius:10px;background:#f4f7fd;text-align:center;font-size:11px;color:var(--suave)}
+.vazio-semana .ic{width:20px;height:20px;color:#9aaad0}
+.vazio-semana a{background:var(--claro);color:var(--azul);font-weight:700;padding:6px 12px;border-radius:9px;font-size:11px}
+.vazio-semana .emoji{font-size:14px}
+.vazio-semana .rosa{color:#d86fb0}
+
+.rodape-semana{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:14px;padding:10px 14px;border:1px solid var(--linha);border-radius:16px;background:#fbfcff}
+.grupo-semana{display:flex;align-items:center;gap:8px}
+.botao-semana{height:34px;padding:0 16px;border:0;border-radius:10px;background:var(--claro);color:var(--suave);font:inherit;font-size:12px;font-weight:600;cursor:pointer}
+.botao-semana:hover{background:#dbe7ff;color:var(--azul)}
+.rodape-semana .titulo-semana{font-size:13px}
+
+.destaque{display:flex;align-items:center;gap:12px;padding:10px 0}
+.destaque+.destaque{border-top:1px solid var(--linha)}
+.titulo-lateral+.destaque{padding-top:2px}
+.icone-destaque{width:36px;height:36px;border-radius:10px;background:#eef3fd;color:var(--marinho);display:grid;place-items:center;flex-shrink:0}
+.icone-destaque .ic{width:20px;height:20px}
+.destaque b{display:block;font-size:13px;font-weight:600;color:var(--marinho)}
+.destaque small{font-size:12px;color:var(--suave)}
+.destaque em{margin-left:auto;font-style:normal;color:var(--azul);font-size:18px}
+.destaque:hover b{color:var(--azul)}
+
+.cartao-motivacao{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:18px;background:linear-gradient(120deg,#e3ecff,#cfe0ff);color:#1553f0;font-size:13px;font-weight:600;position:relative}
+.cartao-motivacao p{padding-right:26px;line-height:1.4}
+.montanha{width:48px;height:42px;flex-shrink:0}
+.brilho-motivacao{position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:22px;opacity:.5}
+
+/* ===== RESPONSIVO ===== */
+@media(max-width:1000px){
+  .conteudo{grid-template-columns:minmax(0,1fr)}
+  #semana .grade-agenda,#dia .grade-agenda{grid-template-columns:minmax(0,1fr)}
+}
+@media(max-width:760px){.cartao-semana{overflow-x:auto}.calendario-semana{min-width:487.5px}
+  .barra-lateral{display:none}
+  .barra-superior{padding:0 9px}
+  .cabecalho-pagina{flex-wrap:wrap}
+  .acoes-pagina{margin-left:0;flex-wrap:wrap}
+  .titulo-mes strong{font-size:18px}
+  .botao-visualizacao{padding:0 12px}
+  #dias-calendario>*{min-height:51px;padding:3.8px;font-size:11px}
+}

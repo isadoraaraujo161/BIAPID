@@ -1,0 +1,162 @@
+:root{--azul:#1553f0;--marinho:#0f1f5c;--texto:#1b2a5e;--suave:#5b6892;--fundo:#f3f6fd;--linha:#e3e9f7;--claro:#e9f0ff;
+--vermelho:#e8455f;--laranja:#f5a524;--verde:#22a06b;--roxo:#5b3fd6}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Plus Jakarta Sans",system-ui,sans-serif;background:var(--fundo);color:var(--texto)}
+a{text-decoration:none;color:inherit}
+.ic{width:19.5px;height:19.5px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.aplicativo{display:flex;min-height:100vh}
+
+/* ===== MENU LATERAL ===== */
+.barra-lateral{width:234px;background:#fff;border-right:1px solid var(--linha);padding:13.5px 13.5px 18px;display:flex;flex-direction:column;flex-shrink:0;position:sticky;top:0;height:100vh;overflow-y:auto}
+.area-logo{display:flex;align-items:center;gap:10.5px}
+.simbolo-logo{width:52.5px;height:49.5px;border-radius:13.5px;background:linear-gradient(135deg,#1a5cff,#0b3fd1);color:#fff;font-size:31.5px;font-weight:800;display:grid;place-items:center;box-shadow:0 4.5px 10.5px rgba(21,83,240,.3)}
+.texto-logo{font-size:25.5px;font-weight:800;color:#0a2a8f;line-height:1}
+.slogan-logo{font-size:11.2px;color:var(--suave)}
+.subtitulo-logo{margin:13.5px 0 10.5px;font-size:12px;line-height:1.3;font-weight:500}
+.menu-lateral{display:flex;flex-direction:column}
+.link-menu{display:flex;align-items:center;gap:13.5px;padding:0 13.5px;height:39.8px;margin:3px 0;border-radius:9px;font-weight:600;font-size:14.2px;color:var(--texto);transition:background .15s}
+.link-menu:hover{background:#f3f6ff}
+.icone-menu{display:grid;place-items:center;color:#1b4fc8}
+.link-menu.ativo{background:var(--claro);color:#0a2a8f;font-weight:700;box-shadow:inset 3px 0 0 var(--azul)}
+.parte-inferior{margin-top:auto;border-top:1px solid var(--linha);padding-top:10.5px}
+.perfil-usuario{margin-top:10.5px;background:var(--claro);border-radius:12px;padding:9px 10.5px;display:flex;align-items:center;gap:10.5px}
+.avatar-usuario{width:46.5px;height:46.5px;border-radius:50%;background:linear-gradient(135deg,#1a5cff,#0b3fd1);color:#fff;font-weight:800;font-size:15px;display:grid;place-items:center;border:3px solid #cfe0ff;flex-shrink:0}
+.informacoes-usuario strong{display:block;color:var(--azul);font-size:12.8px}
+.informacoes-usuario span{font-size:11px;color:var(--suave);display:flex;align-items:center;gap:4.5px}
+.ponto-online{width:7.5px;height:7.5px;border-radius:50%;background:var(--verde);display:inline-block}
+.seta-perfil{margin-left:auto;color:var(--azul);font-size:19.5px}
+
+/* ===== TOPO ===== */
+.conteudo-principal{flex:1;min-width:0}
+.barra-superior{height:61.5px;background:#fff;border-bottom:1px solid var(--linha);display:flex;align-items:center;justify-content:space-between;padding:0 13.5px 0 21px}
+.caminho-pagina{display:flex;align-items:center;gap:10.5px;font-size:14.2px;font-weight:600;color:var(--marinho)}
+.caminho-pagina .ic{color:#1b4fc8}
+.caminho-pagina em{font-style:normal;color:var(--suave);font-weight:400}
+.botao-perfil{border:0;font:inherit;cursor:pointer;background:var(--azul);color:#fff;border-radius:10.5px;height:39.8px;padding:0 16.5px;display:flex;align-items:center;gap:10.5px;font-weight:700;font-size:13.5px;box-shadow:0 4.5px 10.5px rgba(21,83,240,.25)}
+.botao-perfil .ic{width:16.5px;height:16.5px}
+
+/* ===== MEU DINHEIRO ===== */
+.caminho-pagina em{font-style:normal;color:var(--suave);font-weight:400}
+.acoes-superiores{display:flex;align-items:center;gap:12px}
+.notificacao{width:34px;height:34px;border:0;background:none;color:#1b4fc8;cursor:pointer;display:grid;place-items:center;border-radius:10px}
+.notificacao:hover{background:var(--claro)}
+.notificacao .ic{width:20px;height:20px}
+.conteudo-dinheiro{display:flex;flex-direction:column;gap:14px;padding:14px 20px 28px 22px}
+
+/* Cabeçalho */
+.cabecalho-dinheiro{display:flex;align-items:center;gap:14px;padding:2px 4px}
+.icone-dinheiro{width:54px;height:50px;border-radius:15px;background:linear-gradient(135deg,#1a5cff,#0b3fd1);color:#fff;display:grid;place-items:center;flex-shrink:0;box-shadow:0 6px 14px rgba(21,83,240,.28)}
+.icone-dinheiro .ic{width:28px;height:28px}
+.titulo-dinheiro h1{font-size:28px;font-weight:800;line-height:1.15;color:var(--marinho)}
+.titulo-dinheiro p{font-size:14px;color:var(--suave)}
+.botao-novo-lancamento{margin-left:auto;background:#078f63;color:#fff;font-size:14px;font-weight:700;padding:12px 22px;border-radius:12px;box-shadow:0 6px 14px rgba(7,143,99,.28);white-space:nowrap}
+.botao-novo-lancamento:hover{background:#06795a}
+
+/* Resumo */
+.resumo-financeiro{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.card-financeiro{display:flex;align-items:center;gap:14px;padding:16px 18px;background:#fff;border:1px solid #edf1fb;border-radius:20px;box-shadow:0 4px 14px rgba(30,60,140,.07)}
+.icone-financeiro{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;flex-shrink:0}
+.icone-financeiro .ic{width:26px;height:26px}
+.icone-financeiro.verde{background:#d9f6e9;color:#18b57a}
+.icone-financeiro.azul{background:#dbe7ff;color:#2f6bef}
+.icone-financeiro.vermelho{background:#ffe1e4;color:#e8455f}
+.info-financeiro{flex:1;min-width:0}
+.titulo-card-financeiro{display:block;font-size:14px;font-weight:700;color:var(--marinho)}
+.valor-financeiro{display:block;font-size:26px;font-weight:800;line-height:1.25;color:var(--marinho)}
+.pilula-financeira{display:inline-block;margin-top:4px;padding:3px 12px;border-radius:99px;background:#eef3fd;color:var(--suave);font-size:11px}
+.seta-card{color:#5b6ea0;font-size:20px}
+
+/* Grade */
+.grade-dinheiro{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);gap:18px;align-items:start}
+.coluna-principal,.coluna-lateral{display:flex;flex-direction:column;gap:14px;min-width:0}
+.bloco-dinheiro{background:#fff;border:1px solid #edf1fb;border-radius:20px;box-shadow:0 4px 14px rgba(30,60,140,.07);padding:0 18px 18px;overflow:hidden}
+.cabecalho-bloco{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 -18px 12px;padding:14px 18px;border-bottom:1px solid var(--linha)}
+.cabecalho-bloco.sem-linha{border-bottom:0;margin-bottom:0}
+.titulo-bloco{display:flex;align-items:center;gap:10px;color:#1b4fc8}
+.titulo-bloco .ic{width:24px;height:24px}
+.titulo-bloco h2{font-size:16px;font-weight:800;color:var(--marinho)}
+.link-ver-todos{border:0;background:none;font:inherit;font-size:12px;font-weight:700;color:var(--azul);cursor:pointer}
+.link-ver-todos:hover{text-decoration:underline}
+.seletor-mes{display:flex;align-items:center;gap:8px;height:34px;padding:0 10px;border:1px solid var(--linha);border-radius:10px;background:#fff;color:#1b4fc8}
+.seletor-mes .ic{width:16px;height:16px}
+.seletor-mes select{border:0;outline:0;background:transparent;font:inherit;font-size:13px;font-weight:600;color:var(--marinho);cursor:pointer}
+
+/* Gastos por categoria */
+.categorias-gastos{display:flex;flex-direction:column;gap:12px}
+.linha-categoria{display:grid;grid-template-columns:40px minmax(0,1fr) 70px;gap:12px;align-items:center}
+.icone-categoria{width:40px;height:40px;border-radius:50%;display:grid;place-items:center}
+.icone-categoria .ic{width:20px;height:20px}
+.icone-categoria.cat-alimentacao{background:#ffe6bd;color:#e08a00}
+.icone-categoria.cat-transporte{background:#cfe0ff;color:#2f6bef}
+.icone-categoria.cat-estudos{background:#e6dcff;color:#7c4dea}
+.icone-categoria.cat-lazer{background:#ffd9ee;color:#d8409f}
+.nome-categoria{display:block;margin-bottom:6px;font-size:13px;font-weight:700;color:var(--marinho)}
+.barra-categoria{height:8px;border-radius:99px;background:#eef3fd;overflow:hidden}
+.preenchimento-categoria{height:100%;border-radius:99px;transition:width .3s}
+.preenchimento-categoria.cat-alimentacao{background:#f5a524}
+.preenchimento-categoria.cat-transporte{background:#2f6bef}
+.preenchimento-categoria.cat-estudos{background:#8b5cf6}
+.preenchimento-categoria.cat-lazer{background:#f0589b}
+.direita-categoria{display:flex;flex-direction:column;align-items:flex-end;gap:4px}
+.valor-categoria{font-size:12px;font-weight:700;color:var(--marinho)}
+.porcentagem-categoria{font-size:11px;color:var(--suave)}
+.aviso-gastos{display:flex;align-items:center;gap:10px;margin-top:14px;padding:11px 14px;border-radius:12px;background:#eef3fd;font-size:12px;color:var(--suave)}
+.aviso-gastos i{width:16px;height:16px;border:1.5px solid #1b4fc8;border-radius:50%;display:grid;place-items:center;font-size:10px;font-style:normal;font-weight:800;color:#1b4fc8;flex-shrink:0}
+
+/* Últimos lançamentos */
+.tabela-lancamentos{font-size:12px}
+.linha-lancamento{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1.2fr) minmax(0,1fr) minmax(0,1.1fr) 56px;gap:10px;align-items:center;padding:10px 12px;border-bottom:1px solid var(--linha);color:var(--marinho)}
+.linha-lancamento:last-child{border-bottom:0}
+.cabecalho-tabela{border-bottom:0;border-radius:10px;background:#f4f7fd;color:var(--suave);font-size:11px;font-weight:600}
+.cabecalho-tabela[hidden]{display:none}
+.descricao-lancamento{display:flex;align-items:center;gap:8px;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.marca-tipo{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:12px;flex-shrink:0}
+.marca-tipo.positivo{background:#d9f6e9;color:#137a4f}
+.marca-tipo.negativo{background:#ffe1e4;color:#d12a48}
+.valor-lancamento{font-size:12px;font-weight:800}
+.valor-lancamento.positivo{color:#137a4f}
+.valor-lancamento.negativo{color:#d12a48}
+.acoes-lancamento{text-align:right}
+.botao-excluir-lancamento{width:26px;height:26px;border:0;border-radius:8px;background:none;color:#8b98aa;font-size:18px;line-height:1;cursor:pointer}
+.botao-excluir-lancamento:hover{background:#fff0f2;color:#d12a48}
+.estado-vazio{display:flex;flex-direction:column;align-items:center;gap:4px;padding:16px 12px 6px;text-align:center}
+.estado-vazio[hidden]{display:none}
+.icone-vazio{width:46px;height:46px;border-radius:50%;background:#e8f0ff;color:#2f6bef;display:grid;place-items:center;margin-bottom:4px}
+.icone-vazio .ic{width:24px;height:24px}
+.estado-vazio strong{font-size:13px;color:var(--marinho)}
+.estado-vazio p{font-size:12px;color:var(--suave)}
+.botao-contorno{margin-top:8px;padding:8px 18px;border:1.5px solid var(--azul);border-radius:10px;color:var(--azul);font-size:12px;font-weight:700}
+.botao-contorno:hover{background:var(--claro)}
+
+/* Meta financeira */
+.meta-vazia{display:flex;flex-direction:column;align-items:center;text-align:center;padding:4px 10px 4px}
+.ilustracao-meta{width:120px;height:80px}
+.meta-vazia strong{margin-top:4px;font-size:16px;font-weight:800;color:var(--marinho)}
+.meta-vazia p{margin-top:4px;max-width:260px;font-size:13px;line-height:1.45;color:var(--suave)}
+.botao-azul{margin-top:12px;padding:11px 36px;border-radius:12px;background:var(--azul);color:#fff;font-size:13px;font-weight:700;box-shadow:0 6px 12px rgba(21,83,240,.25)}
+.botao-azul:hover{background:#0f42c7}
+
+/* Dica */
+.bloco-dica{position:relative;padding:16px 18px 18px;background:linear-gradient(135deg,#f3f8ff,#e8f1ff)}
+.topo-dica{display:flex;align-items:center;gap:10px;color:#1b4fc8;margin-bottom:8px}
+.topo-dica .ic{width:26px;height:26px}
+.topo-dica h2{font-size:15px;font-weight:800;color:var(--marinho)}
+.bloco-dica p{max-width:300px;font-size:12px;line-height:1.5;color:var(--suave)}
+.frase-dica{display:block;margin-top:6px;text-align:right;transform:rotate(-6deg);font-family:"Caveat","Segoe Script",cursive;font-size:19px;font-weight:500;line-height:1.1;color:#3b6fe0}
+
+/* ===== RESPONSIVO ===== */
+@media(max-width:1150px){
+  .grade-dinheiro{grid-template-columns:minmax(0,1fr)}
+}
+@media(max-width:900px){
+  .resumo-financeiro{grid-template-columns:minmax(0,1fr)}
+}
+@media(max-width:760px){
+  .barra-lateral{display:none}
+  .barra-superior{padding:0 12px}
+  .cabecalho-dinheiro{flex-wrap:wrap}
+  .botao-novo-lancamento{margin-left:0}
+  .linha-lancamento{grid-template-columns:minmax(0,1.6fr) minmax(0,1fr) 44px}
+  .linha-lancamento>:nth-child(2),.linha-lancamento>:nth-child(3){display:none}
+}

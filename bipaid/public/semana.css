@@ -1,0 +1,683 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f6f8fc;
+    color: #17243b;
+}
+
+
+/* =========================================
+   APLICATIVO
+========================================= */
+
+.aplicativo {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+}
+
+
+/* =========================================
+   BARRA LATERAL
+========================================= */
+
+.barra-lateral {
+    width: 265px;
+    min-width: 265px;
+    height: 100vh;
+
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 23px 10px 8px;
+
+    background: #ffffff;
+    color: #536b88;
+
+    border-right: 1px solid #dce4ed;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.area-logo {
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    padding-left: 9px;
+}
+
+.simbolo-logo {
+    width: 39px;
+    height: 39px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: #245fe5;
+    color: #ffffff;
+
+    font-size: 21px;
+    font-weight: bold;
+
+    box-shadow: 0 5px 12px rgba(36, 95, 229, .20);
+}
+
+.texto-logo {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+
+    color: #2452b5;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.texto-logo small {
+    color: #8092aa;
+
+    font-size: 9px;
+    font-weight: 500;
+
+    line-height: 1.25;
+}
+
+
+/* =========================================
+   MENU
+========================================= */
+
+.menu-lateral {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+
+    margin-top: 49px;
+}
+
+.link-menu {
+    width: 100%;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 0 14px;
+
+    border-radius: 10px;
+
+    color: #536b88;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: .2s ease;
+}
+
+.link-menu:hover {
+    background: #f0f5ff;
+    color: #2162e9;
+}
+
+.link-menu.ativo {
+    background: #e4efff;
+    color: #2162e9;
+
+    font-weight: 600;
+}
+
+.icone-menu {
+    width: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #607894;
+
+    font-size: 17px;
+}
+
+.link-menu.ativo .icone-menu {
+    color: #2162e9;
+}
+
+.texto-menu {
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   PARTE INFERIOR DA SIDEBAR
+========================================= */
+
+.parte-inferior {
+    margin-top: auto;
+}
+
+.link-configuracoes {
+    margin-bottom: 13px;
+}
+
+
+/* =========================================
+   PERFIL
+========================================= */
+
+.perfil-usuario {
+    min-height: 66px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 12px 9px 5px;
+
+    border-top: 1px solid #dce4ed;
+}
+
+.avatar-usuario {
+    width: 37px;
+    height: 37px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #dce9ff;
+    color: #2162e9;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.informacoes-usuario {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.informacoes-usuario strong {
+    color: #294568;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.informacoes-usuario span {
+    color: #8495aa;
+
+    font-size: 10px;
+}
+
+
+/* =========================================
+   CONTEÚDO PRINCIPAL
+========================================= */
+
+.conteudo-principal {
+    flex: 1;
+    min-width: 0;
+
+    background: #f6f8fc;
+}
+
+
+/* =========================================
+   BARRA SUPERIOR
+========================================= */
+
+.barra-superior {
+    width: 100%;
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 38px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #dce4ed;
+}
+
+.caminho-pagina {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+}
+
+.caminho-pagina strong {
+    color: #172d4d;
+
+    font-size: 13px;
+}
+
+.caminho-pagina span {
+    position: relative;
+
+    color: #8b9aae;
+
+    font-size: 13px;
+}
+
+.caminho-pagina span::before {
+    content: "/";
+
+    position: absolute;
+
+    left: -12px;
+
+    color: #c2cad5;
+}
+
+
+/* =========================================
+   AÇÕES SUPERIORES
+========================================= */
+
+.acoes-superiores {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+}
+
+.notificacao {
+    width: 37px;
+    height: 37px;
+
+    border: 1px solid #dce4ed;
+    border-radius: 10px;
+
+    background: #ffffff;
+    color: #617793;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+.botao-perfil {
+    height: 39px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 0 13px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #2162e9;
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    box-shadow: 0 5px 15px rgba(33, 98, 233, .20);
+
+    cursor: pointer;
+}
+
+.botao-perfil span {
+    font-size: 16px;
+}
+
+
+/* =========================================
+   CONTEÚDO DA SEMANA
+========================================= */
+
+.conteudo {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 35px 38px 60px;
+}
+
+
+/* =========================================
+   CABEÇALHO
+========================================= */
+
+.cabecalho-semana {
+    margin-bottom: 34px;
+}
+
+.titulo-secao {
+    margin-bottom: 13px;
+
+    color: #2162e9;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: .4px;
+}
+
+.cabecalho-semana h1 {
+    margin-bottom: 12px;
+
+    color: #172d4d;
+
+    font-size: 38px;
+    line-height: 1.15;
+
+    letter-spacing: -1.3px;
+}
+
+.cabecalho-semana p {
+    max-width: 750px;
+
+    color: #8298b8;
+
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   GRADE DOS CARDS
+========================================= */
+
+.grade-resumo {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+
+/* =========================================
+   CARD DE RESUMO
+========================================= */
+
+.card-resumo {
+    min-height: 166px;
+
+    padding: 21px 22px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: #ffffff;
+
+    border: 1px solid #dce5ef;
+    border-radius: 19px;
+
+    box-shadow: 0 8px 25px rgba(45, 75, 115, .04);
+}
+
+
+/* =========================================
+   TOPO DOS CARDS
+========================================= */
+
+.topo-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* =========================================
+   ÍCONES
+========================================= */
+
+.icone-card {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.icone-card.verde {
+    background: #dcf9e8;
+    color: #09a957;
+}
+
+.icone-card.azul {
+    background: #e0ecff;
+    color: #2162e9;
+}
+
+.icone-card.roxo {
+    background: #eee5ff;
+    color: #7738ee;
+}
+
+
+/* =========================================
+   INDICADORES
+========================================= */
+
+.indicador {
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.verde-texto {
+    background: #edfcf4;
+    color: #08a455;
+}
+
+.azul-texto {
+    background: #eef5ff;
+    color: #2162e9;
+}
+
+.roxo-texto {
+    background: #f3edff;
+    color: #7738ee;
+}
+
+
+/* =========================================
+   NOME DO CARD
+========================================= */
+
+.nome-card {
+    color: #7e94b5;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    letter-spacing: 1.2px;
+}
+
+
+/* =========================================
+   RESUMO ASSISTIDO
+========================================= */
+
+.card-resumo-assistido {
+    width: 100%;
+
+    margin-top: 30px;
+
+    padding: 23px;
+
+    background: #ffffff;
+
+    border: 1px solid #dce5ef;
+    border-radius: 19px;
+
+    box-shadow: 0 8px 25px rgba(45, 75, 115, .04);
+}
+
+.titulo-assistido {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    color: #536f99;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: .5px;
+}
+
+.titulo-assistido:first-letter {
+    color: #2162e9;
+    font-size: 18px;
+}
+
+.conteudo-assistido {
+    margin-top: 20px;
+}
+
+.conteudo-assistido h2 {
+    margin-bottom: 9px;
+
+    color: #172d4d;
+
+    font-size: 19px;
+}
+
+.conteudo-assistido p {
+    color: #8298b8;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+/* =========================================
+   TEXTOS MAIS ESCUROS
+========================================= */
+
+body {
+    color: #17243b;
+}
+
+.caminho-pagina strong {
+    color: #172d4d;
+}
+
+.caminho-pagina span {
+    color: #60728b;
+}
+
+.titulo-secao {
+    color: #1458d8;
+}
+
+.cabecalho-semana h1 {
+    color: #101d33;
+}
+
+.cabecalho-semana p {
+    color: #607895;
+}
+
+
+/* Textos dos cards */
+
+.nome-card {
+    color: #526987;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+}
+
+
+/* Indicadores */
+
+.verde-texto {
+    background: #edfcf4;
+    color: #079447;
+}
+
+.azul-texto {
+    background: #eef5ff;
+    color: #1458d8;
+}
+
+.roxo-texto {
+    background: #f3edff;
+    color: #6930d8;
+}
+
+
+/* Resumo assistido */
+
+.titulo-assistido {
+    color: #425f82;
+}
+
+.conteudo-assistido h2 {
+    color: #172d4d;
+}
+
+.conteudo-assistido p {
+    color: #607895;
+}
+
+
+/* Perfil */
+
+.informacoes-usuario strong {
+    color: #253e60;
+}
+
+.informacoes-usuario span {
+    color: #667d99;
+}
