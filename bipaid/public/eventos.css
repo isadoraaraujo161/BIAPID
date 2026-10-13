@@ -1,0 +1,862 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f6f8fc;
+    color: #17243b;
+}
+
+
+/* =====================================================
+   APLICATIVO
+===================================================== */
+
+.aplicativo {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+}
+
+
+/* =====================================================
+   BARRA LATERAL
+===================================================== */
+
+.barra-lateral {
+    width: 235px;
+    min-width: 235px;
+    height: 100vh;
+
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 27px 13px 10px;
+
+    background: #ffffff;
+    color: #536b88;
+
+    border-right: 1px solid #dce4ed;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.area-logo {
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding-left: 7px;
+}
+
+.simbolo-logo {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #245fe5;
+    color: #ffffff;
+
+    font-size: 21px;
+    font-weight: bold;
+
+    box-shadow: 0 5px 12px rgba(36, 95, 229, .20);
+}
+
+.texto-logo {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+
+    color: #2452b5;
+
+    font-size: 19px;
+    font-weight: 700;
+
+    letter-spacing: .3px;
+}
+
+.texto-logo small {
+    color: #8092aa;
+
+    font-size: 8px;
+    font-weight: 500;
+
+    letter-spacing: .4px;
+}
+
+
+/* =====================================================
+   MENU
+===================================================== */
+
+.menu-lateral {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+
+    margin-top: 35px;
+}
+
+.link-menu {
+    width: 100%;
+    height: 43px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 0 12px;
+
+    border-radius: 9px;
+
+    color: #536b88;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: .2s ease;
+}
+
+.link-menu:hover {
+    background: #f0f5ff;
+    color: #2162e9;
+}
+
+.link-menu.ativo {
+    background: #e4efff;
+    color: #2162e9;
+
+    font-weight: 600;
+}
+
+.icone-menu {
+    width: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #607894;
+
+    font-size: 16px;
+}
+
+.link-menu.ativo .icone-menu {
+    color: #2162e9;
+}
+
+.texto-menu {
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   PARTE INFERIOR
+===================================================== */
+
+.parte-inferior {
+    margin-top: auto;
+}
+
+.link-configuracoes {
+    margin-bottom: 12px;
+}
+
+
+/* =====================================================
+   PERFIL
+===================================================== */
+
+.perfil-usuario {
+    min-height: 67px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 13px 8px 4px;
+
+    border-top: 1px solid #dce4ed;
+}
+
+.avatar-usuario {
+    width: 36px;
+    height: 36px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #dce9ff;
+    color: #2162e9;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.informacoes-usuario {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.informacoes-usuario strong {
+    color: #294568;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.informacoes-usuario span {
+    color: #8495aa;
+
+    font-size: 9px;
+}
+
+
+/* =====================================================
+   CONTEÚDO PRINCIPAL
+===================================================== */
+
+.conteudo-principal {
+    flex: 1;
+    min-width: 0;
+
+    background: #f6f8fc;
+}
+
+
+/* =====================================================
+   BARRA SUPERIOR
+===================================================== */
+
+.barra-superior {
+    width: 100%;
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 38px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #dce4ed;
+}
+
+.caminho-pagina {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+}
+
+.caminho-pagina strong {
+    color: #172d4d;
+
+    font-size: 13px;
+}
+
+.caminho-pagina span {
+    position: relative;
+
+    color: #8b9aae;
+
+    font-size: 13px;
+}
+
+.caminho-pagina span::before {
+    content: "/";
+
+    position: absolute;
+
+    left: -12px;
+
+    color: #c2cad5;
+}
+
+
+/* =====================================================
+   AÇÕES SUPERIORES
+===================================================== */
+
+.acoes-superiores {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+}
+
+.notificacao {
+    width: 36px;
+    height: 36px;
+
+    border: 1px solid #dce4ed;
+    border-radius: 9px;
+
+    background: #ffffff;
+    color: #617793;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+.botao-perfil {
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 0 12px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #2162e9;
+    color: #ffffff;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    box-shadow: 0 5px 15px rgba(33, 98, 233, .20);
+
+    cursor: pointer;
+}
+
+.botao-perfil span {
+    font-size: 16px;
+}
+
+
+/* =====================================================
+   CONTEÚDO DOS EVENTOS
+===================================================== */
+
+.conteudo-eventos {
+    position: relative;
+
+    width: 100%;
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    padding: 33px 38px 70px;
+}
+
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+.status {
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 27px;
+
+    color: #8295b0;
+
+    font-size: 12px;
+}
+
+.ponto-status {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #19b768;
+}
+
+
+/* =====================================================
+   ASSISTENTE BIPAID
+===================================================== */
+
+.assistente-eventos {
+    position: absolute;
+
+    top: 34px;
+    right: 38px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: #6d28d9;
+
+    font-size: 15px;
+}
+
+.icone-assistente {
+    font-size: 21px;
+}
+
+
+/* =====================================================
+   CABEÇALHO
+===================================================== */
+
+.cabecalho-eventos {
+    margin-bottom: 31px;
+}
+
+.etiqueta-eventos {
+    display: block;
+
+    margin-bottom: 13px;
+
+    color: #2162e9;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: .4px;
+}
+
+.cabecalho-eventos h1 {
+    max-width: 850px;
+
+    margin-bottom: 13px;
+
+    color: #101f39;
+
+    font-size: 36px;
+    font-weight: 700;
+
+    line-height: 1.15;
+
+    letter-spacing: -1.2px;
+}
+
+.cabecalho-eventos p {
+    max-width: 850px;
+
+    color: #8ba0bd;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   RECOMENDAÇÃO
+===================================================== */
+
+.recomendacao-eventos {
+    width: 100%;
+    min-height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 28px;
+
+    padding: 0 18px;
+
+    border: 1px solid #d9c8ff;
+    border-radius: 17px;
+
+    background: #f5efff;
+
+    color: #806ca4;
+
+    font-size: 13px;
+}
+
+.recomendacao-conteudo {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    min-width: 0;
+}
+
+.recomendacao-conteudo strong {
+    color: #8b75b4;
+
+    font-weight: 700;
+}
+
+.icone-recomendacao {
+    color: #7c3aed;
+
+    font-size: 20px;
+}
+
+.recomendacao-eventos a {
+    flex-shrink: 0;
+
+    color: #8a78a8;
+
+    text-decoration: underline;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   LISTA DE EVENTOS
+===================================================== */
+
+.lista-eventos {
+    display: flex;
+    flex-direction: column;
+
+    gap: 23px;
+}
+
+
+/* =====================================================
+   CARD DO EVENTO
+===================================================== */
+
+.card-evento {
+    width: 100%;
+
+    padding: 26px 26px 25px;
+
+    border: 1px solid #dce5ef;
+    border-radius: 20px;
+
+    background: #ffffff;
+
+    box-shadow: 0 8px 25px rgba(38, 65, 105, .04);
+}
+
+
+/* =====================================================
+   TOPO DO EVENTO
+===================================================== */
+
+.topo-evento {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 18px;
+
+    min-height: 72px;
+}
+
+.icone-evento {
+    width: 62px;
+    height: 62px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: #929ab3;
+    color: #2162e9;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.icone-evento small {
+    margin-top: 3px;
+
+    color: #2162e9;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.conteudo-topo-evento {
+    padding-top: 2px;
+}
+
+.tag-evento {
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 25px;
+
+    padding: 0 11px;
+
+    border-radius: 20px;
+
+    background: #edf5ff;
+    color: #2162e9;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   DESCRIÇÃO
+===================================================== */
+
+.descricao-evento {
+    margin: 7px 0 25px 80px;
+
+    color: #8ba0bd;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+/* =====================================================
+   INFORMAÇÕES DO EVENTO
+===================================================== */
+
+.informacoes-evento {
+    width: 100%;
+
+    margin-top: 28px;
+    padding: 20px 22px;
+
+    background: #eef4ff;
+
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.item-informacao {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: #536f99;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.item-informacao .icone-informacao {
+    width: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #2162e9;
+
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   TÍTULO / DESCRIÇÃO DO EVENTO
+===================================================== */
+
+.descricao-evento {
+    margin-top: 25px;
+    margin-left: 80px;
+
+    color: #7891b5;
+
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   ETIQUETA DO EVENTO
+===================================================== */
+
+.etiqueta-evento {
+    display: inline-flex;
+    align-items: center;
+
+    width: fit-content;
+
+    padding: 7px 13px;
+
+    border-radius: 20px;
+
+    background: #edf4ff;
+    color: #2162e9;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   CARD DO EVENTO
+===================================================== */
+
+.card-evento {
+    width: 100%;
+
+    padding: 26px;
+
+    background: #ffffff;
+
+    border: 1px solid #dce5f0;
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(45, 75, 115, 0.05);
+}
+
+
+/* =====================================================
+   CABEÇALHO DO EVENTO
+===================================================== */
+
+.cabecalho-evento {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 18px;
+}
+
+.icone-evento {
+    width: 62px;
+    height: 62px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: #e6edff;
+
+    color: #2162e9;
+
+    font-size: 23px;
+}
+
+
+/* =====================================================
+   NOME DO EVENTO
+===================================================== */
+
+.nome-evento {
+    margin-top: 4px;
+
+    color: #172d4d;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   ÁREA INFERIOR DO CARD
+===================================================== */
+
+.rodape-evento {
+    margin-top: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 18px;
+
+    border-top: 1px solid #dce5f0;
+}
+
+.referencia-evento {
+    color: #53739f;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.referencia-evento:hover {
+    color: #2162e9;
+}
+
+
+/* =====================================================
+   BOTÃO ADICIONAR À AGENDA
+===================================================== */
+
+.botao-agenda {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 12px 18px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #2162e9;
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow: 0 6px 16px rgba(33, 98, 233, 0.20);
+
+    transition: .2s ease;
+    text-decoration: none;
+}
+
+.botao-agenda:hover {
+    background: #174fc4;
+
+    transform: translateY(-1px);
+}

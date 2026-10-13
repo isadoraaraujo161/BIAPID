@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BIPAID - Adicionar tarefa</title>
+
+    <link rel="stylesheet" href="agendatarefa.css">
+</head>
+
+<body>
+
+    <div class="aplicativo">
+
+        <aside class="barra-lateral">
+
+            <div class="area-logo">
+
+                <div class="simbolo-logo">
+                    B
+                </div>
+
+                <div class="texto-logo">
+                    BIPAID
+                </div>
+
+            </div>
+
+            <div class="subtitulo-logo">
+                VOCÊ FALA. A BIPAID ORGANIZA.
+            </div>
+
+            <nav class="menu-lateral">
+
+                <a href="paginainicial.html" class="link-menu">
+                    <span class="icone-menu">⌂</span>
+                    <span class="texto-menu">Início</span>
+                </a>
+
+                <a href="agenda.html" class="link-menu ativo">
+                    <span class="icone-menu">▦</span>
+                    <span class="texto-menu">Agenda</span>
+                </a>
+
+                <a href="nota.html" class="link-menu">
+                    <span class="icone-menu">☷</span>
+                    <span class="texto-menu">Notas</span>
+                </a>
+
+                <a href="meudinheiro.html" class="link-menu">
+                    <span class="icone-menu">▱</span>
+                    <span class="texto-menu">Meu Dinheiro</span>
+                </a>
+
+                <a href="metas.html" class="link-menu">
+                    <span class="icone-menu">◎</span>
+                    <span class="texto-menu">Minhas Metas</span>
+                </a>
+
+                <a href="eventos.html" class="link-menu">
+                    <span class="icone-menu">♧</span>
+                    <span class="texto-menu">Eventos EPT</span>
+                </a>
+
+                <a href="semana.html" class="link-menu">
+                    <span class="icone-menu">▥</span>
+                    <span class="texto-menu">Minha Semana</span>
+                </a>
+                <a href="enem.html" class="link-menu">
+                    <span class="icone-menu">✦</span>
+                    <span class="texto-menu">ENEM</span>
+                </a>
+
+            </nav>
+
+            <div class="parte-inferior">
+
+                <a href="#" class="link-menu link-configuracoes">
+
+                    <span class="icone-menu">⚙</span>
+
+                    <span class="texto-menu">
+                        Ajustes
+                    </span>
+
+                </a>
+
+                <div class="perfil-usuario">
+
+                    <div class="avatar-usuario">
+                        IS
+                    </div>
+
+                     <div class="informacoes-usuario">
+
+                        <strong class="nome-usuario">
+                         Isabella Guedes
+                         </strong>
+
+                        <span>
+                        Conta conectada
+                        </span>
+
+                         </div>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+        <main class="conteudo-principal">
+
+            <header class="barra-superior">
+
+                <div class="caminho-pagina">
+
+                    <strong>
+                        BIPAID
+                    </strong>
+
+                    <span>
+                        /
+                    </span>
+
+                    <span>
+                        Adicionar tarefa
+                    </span>
+
+                </div>
+
+                <div class="acoes-superiores">
+
+                    <button class="notificacao">
+                        ♧
+                    </button>
+
+                    <button class="botao-perfil">
+                   <span class="nome-usuario">Isabella Guedes</span>
+                     <span>♙</span>
+                     </button>
+
+                </div>
+
+            </header>
+
+            <div class="pagina-tarefa">
+
+                <div class="container-tarefa">
+
+                    <div class="cabecalho-tarefa">
+
+                        <span class="rotulo-secao">
+                            PLANEJAMENTO
+                        </span>
+
+                        <h1>
+                            Adicionar tarefa
+                        </h1>
+
+                        <p>
+                            Crie uma nova tarefa para organizar
+                            melhor o seu dia.
+                        </p>
+
+                    </div>
+
+                    <form class="formulario-tarefa" id="formulario-tarefa">
+
+                        <div class="grupo-formulario">
+
+                            <label for="titulo">
+                                Nome da tarefa
+                            </label>
+
+                            <input
+                                type="text"
+                                id="titulo"
+                                name="titulo"
+                                placeholder="Ex: Revisar matemática"
+                                required
+                            >
+
+                        </div>
+
+                        <div class="grupo-formulario">
+
+                            <label for="descricao">
+                                Descrição
+                            </label>
+
+                            <textarea
+                                id="descricao"
+                                name="descricao"
+                                placeholder="Adicione uma descrição para sua tarefa..."
+                            ></textarea>
+
+                        </div>
+
+                        <div class="linha-formulario">
+
+                            <div class="grupo-formulario">
+
+                                <label for="data">
+                                    Data
+                                </label>
+
+                                <input
+                                    type="date"
+                                    id="data"
+                                    name="data"
+                                    required
+                                >
+
+                            </div>
+
+                            <div class="grupo-formulario">
+
+                                <label for="horario">
+                                    Horário
+                                </label>
+
+                                <input
+                                    type="time"
+                                    id="horario"
+                                    name="horario"
+                                >
+
+                            </div>
+
+                        </div>
+
+                        <div class="linha-formulario">
+
+                            <div class="grupo-formulario">
+
+                                <label for="categoria">
+                                    Categoria
+                                </label>
+
+                                <select
+                                    id="categoria"
+                                    name="categoria"
+                                >
+
+                                    <option value="">
+                                        Escolha uma categoria
+                                    </option>
+
+                                    <option value="estudos">
+                                        Estudos
+                                    </option>
+
+                                    <option value="pessoal">
+                                        Pessoal
+                                    </option>
+
+                                    <option value="trabalho">
+                                        Trabalho
+                                    </option>
+
+                                    <option value="outros">
+                                        Outros
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                            <div class="grupo-formulario">
+
+                                <label for="prioridade">
+                                    Prioridade
+                                </label>
+
+                                <select
+                                    id="prioridade"
+                                    name="prioridade"
+                                >
+
+                                    <option value="normal">
+                                        Normal
+                                    </option>
+
+                                    <option value="importante">
+                                        Importante
+                                    </option>
+
+                                    <option value="urgente">
+                                        Urgente
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                        <div class="botoes-tarefa">
+
+                            <a
+                                href="agenda.html"
+                                class="botao-cancelar"
+                            >
+                                Cancelar
+                            </a>
+
+                           <button type="submit" class="botao-salvar">
+                                  ＋ &nbsp; Adicionar tarefa
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+    <script src="usuario.js"></script>
+<script src="agendatarefa.js"></script>
+
+</body>
+
+</html>
